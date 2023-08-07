@@ -4,9 +4,11 @@ const createStore = redux.createStore;
 const combineReducers = redux.combineReducers;
 const applyMiddleware = redux.applyMiddleware;
 const logger = reduxLogger.createLogger();
+
 // create  a action type:
 const BUY_CAKE = "BAY_CAKE";
 const BUY_ICECREAM = "BUY_ICECREAM";
+
 // CREATE ACTION CREATOR:
 function buyCake() {
   return {
