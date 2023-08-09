@@ -89,3 +89,4 @@ store.dispatch(buyIceCream());
 store.dispatch(buyIceCream());
 // store.dispatch(buyCake());
 unsubscribe();
+console.log("learning redux");
