@@ -22,3 +22,4 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+// console.log("rashed esta mi amor");
