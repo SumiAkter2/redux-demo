@@ -1,3 +1,6 @@
+const redux = require("redux");
+const createStore = redux.createStore;
+
 const BUY_BREAD = "BUY_BREAD";
 const buyBread = () => {
   return {
@@ -20,3 +23,14 @@ const reducer = (state = initialState, action) => {
       return state;
   }
 };
+
+const store = createStore(reducer);
+console.log("initial State is: ", store.getState());
+const unSubscribe = store.subscribe(() =>
+  console.log("updated state :", store.getState())
+);
+
+store.dispatch(buyBread());
+store.dispatch(buyBread());
+store.dispatch(buyBread());
+unSubscribe();
